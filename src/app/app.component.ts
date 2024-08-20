@@ -48,10 +48,6 @@ export class AppComponent {
 
   constructor() {}
 
-  // confirm(): void {
-  //   alert('hi ' + this.name + ' thanks for confirming');
-  // }
-
   onItemClicked(item: DataItem): void {
     console.log('Data received in parent ', item);
   }
