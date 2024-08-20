@@ -8,10 +8,10 @@ import { ColumnInfo, DataItem } from './app.model';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'Hello World !';
+  title = 'Angular Practice';
   name = '';
-  imageUrl =
-    'https://thumbs.dreamstime.com/b/angular-logo-editorial-illustrative-white-background-angular-logo-editorial-illustrative-white-background-eps-download-208329119.jpg';
+  today = 'Jun 15, 2015';
+  fee = '2000';
   stateOptions = [
     'Telangana',
     'Karnataka',
@@ -41,9 +41,24 @@ export class AppComponent {
   ];
 
   items: DataItem[] = [
-    { name: 'Alex', address: 'US', gender: 'M', phone: '1234567890' },
-    { name: 'Peter', address: 'China', gender: 'M', phone: '2343224234' },
-    { name: 'John', address: 'Australia', gender: 'M', phone: '32423432434' },
+    {
+      name: 'Alex',
+      address: 'US',
+      gender: 'M',
+      phone: '1234567890',
+    },
+    {
+      name: 'Peter',
+      address: 'China',
+      gender: 'M',
+      phone: '2343224234',
+    },
+    {
+      name: 'John',
+      address: 'Australia',
+      gender: 'M',
+      phone: '32423432434',
+    },
   ];
 
   constructor() {}
