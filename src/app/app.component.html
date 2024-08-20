@@ -1,4 +1,4 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 <!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
 <!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
@@ -6,7 +6,7 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
+<!--
 <style>
   :host {
     --bright-blue: oklch(51.01% 0.274 263.83);
@@ -330,7 +330,46 @@
 <!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 
-<router-outlet />
+//<router-outlet /> -->
+<div>{{ title }}</div>
+<br />
+<!-- <img [src]="imageUrl" alt="Angular Image" /> -->
+<br />
+<br />
+<!-- <input type="text" [value]="name" /> -->
+<label>Name : </label>
+<input type="text" [(ngModel)]="name" />
+
+<!-- <button *ngIf="name" [disabled]="!name" (click)="confirm()">Confirm</button> -->
+<br />
+
+<p *ngIf="!name">Please enter your name</p>
+<!-- <label for="state">State:</label>
+<select id="state" name="state" required>
+  <option value="">Select a state</option>
+  <option *ngFor="let stateOption of stateOptions" value="{{ stateOption }}">
+    {{ stateOption }}
+  </option>
+</select> -->
+<app-dropdown
+  [stateOptions]="stateOptions"
+  (stateSelected)="onStateSelected($event)"
+>
+</app-dropdown>
+<p *ngIf="!selectedState">Please enter your state</p>
+<!-- <p>You live in {{ selectedState }}</p> -->
+
+<!-- Property binding 
+ @Input()-->
+<app-table
+  [columns]="tableColumns"
+  [data]="items"
+  (itemClicked)="onItemClicked($event)"
+></app-table>
+
+<button *ngIf="name" [disabled]="!name || !selectedState" (click)="confirm()">
+  Confirm
+</button>

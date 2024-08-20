@@ -1,0 +1,7 @@
+<label for="state">State:</label>
+<select id="state" name="state" (change)="onStateChange($event)">
+  <option value="">Select a state</option>
+  <option *ngFor="let stateOption of stateOptions" [value]="stateOption">
+    {{ stateOption }}
+  </option>
+</select>
