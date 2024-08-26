@@ -12,6 +12,7 @@ export class AppComponent {
   name = '';
   today = 'Jun 15, 2015';
   fee = '2000';
+  loadB = false;
   stateOptions = [
     'Telangana',
     'Karnataka',
