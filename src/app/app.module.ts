@@ -9,6 +9,8 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 import { AComponent } from './a/a.component';
 import { BComponent } from './b/b.component';
 import { TestService } from './test.service';
+import { NumberFormatDirective } from './number-format.directive';
+import { DupfreePipe } from './dupfree.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,6 +18,8 @@ import { TestService } from './test.service';
     DropdownComponent,
     AComponent,
     BComponent,
+    NumberFormatDirective,
+    DupfreePipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [TestService],

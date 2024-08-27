@@ -39,3 +39,16 @@
 
 <app-a></app-a>
 <app-b></app-b>
+
+<div>
+  <label for="numberInput">Enter Number:</label>
+  <input id="numberInput" type="text" appNumberFormat />
+</div>
+<h3>Select a State</h3>
+<select (change)="onSelect($event)">
+  <option *ngFor="let state of states | dupfree" [value]="state">
+    {{ state }}
+  </option>
+</select>
+
+<p *ngIf="selectState">You selected: {{ selectedState }}</p>

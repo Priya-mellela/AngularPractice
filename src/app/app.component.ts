@@ -80,4 +80,22 @@ export class AppComponent {
         ', thanks for confirming'
     );
   }
+
+  states: string[] = [
+    'California',
+    'Texas',
+    'Florida',
+    'New York',
+    'Texas',
+    'California',
+    'California',
+  ];
+  selectState: string = '';
+
+  onSelect(event: Event | undefined) {
+    if (event) {
+      const target = event.target as HTMLSelectElement;
+      this.selectedState = target.value;
+    }
+  }
 }

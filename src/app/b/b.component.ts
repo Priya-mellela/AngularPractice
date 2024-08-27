@@ -5,7 +5,6 @@ import { TestService } from '../test.service';
   selector: 'app-b',
   templateUrl: './b.component.html',
   styleUrl: './b.component.scss',
-  providers: [TestService],
 })
 export class BComponent implements OnInit {
   buttonClicked: boolean = false;
